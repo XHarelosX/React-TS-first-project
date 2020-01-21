@@ -1,26 +1,47 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Header from "./Components/Header/Header";
+import Sidebar from "./Components/Sidebar/Sidebar";
+import Backdrop from "./Components/Backdrop/Backdrop";
+import CocktileApiSearcher from "./Components/CocktileApiComponent/CocktileApiSearcher";
 
-const App: React.FC = () => {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+interface Props {}
+
+interface State {
+  sideBarStatus: boolean;
+}
+
+class App extends React.Component<Props, State> {
+  state = {
+    sideBarStatus: false
+  };
+
+  burgerToggleClickHandler = () => {
+    this.setState(prevState => {
+      return {
+        sideBarStatus: !prevState.sideBarStatus
+      };
+    });
+  };
+
+  render() {
+    
+    let backdrop;
+    if (this.state.sideBarStatus){      
+      backdrop = <Backdrop burgerToggleClickHandler = {this.burgerToggleClickHandler}/>
+    }
+
+    return (
+      <div className="App">
+        <Header
+          sideBarStatus={this.state.sideBarStatus}
+          BTClickHandler={this.burgerToggleClickHandler}
+        />
+        {backdrop}
+        <Sidebar sideBarStatus={this.state.sideBarStatus}/>
+        <CocktileApiSearcher/>
+      </div>
+    );
+  }
 }
 
 export default App;

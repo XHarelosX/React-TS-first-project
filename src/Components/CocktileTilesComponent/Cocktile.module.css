@@ -1,0 +1,22 @@
+.li {
+  width: 200px;
+  height: 300px;
+  flex: 0 1 auto;
+  padding: 0 0;
+  margin: 5px 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border: 1px solid gray;
+}
+.img {
+  width: auto;
+  height: 200px;
+  flex: 1;
+  /* flex-grow: 1; */
+}
+/* .popup_content{
+  position: absolute;
+  top:50%;
+  right: 50%;
+} */

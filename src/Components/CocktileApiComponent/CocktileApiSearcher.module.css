@@ -1,0 +1,29 @@
+.ul {
+  list-style: none;
+  margin: 30px 5%;
+  padding: 0 0;
+  flex: auto;
+  display: flex;
+  width: auto;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.div_search {
+  text-align: center;
+}
+.div_title {
+  font-size: 2.5em;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.div_title_input {
+  font-size: 1.5em;
+  border: 1px solid gray;
+}
+.main {
+  text-align: center;
+}
+.hr{
+  margin-left: 5%;
+  margin-right:  5%;
+
+}
