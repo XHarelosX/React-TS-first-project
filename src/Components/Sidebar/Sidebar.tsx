@@ -14,8 +14,8 @@ const Sidebar: React.FC<Props> = ({ sideBarStatus }) => {
   return (
     <Fragment>
       <aside className={sideNavbarCss}>
-        <nav className={[classes.nav_sidebar].join(" ")}>
-          <ul className={[classes.ul_sidebar].join(" ")}>
+        <nav className={classes.nav_sidebar}>
+          <ul className={classes.ul_sidebar}>
             <li>Home</li>
             <li>Cooking Recipes</li>
             <li>Cocktails Recipes</li>

@@ -12,13 +12,7 @@
   height: 100%;
   text-align: center;
   border: 1px solid black;
-}
-ul li {
   font-size: 20px;
-}
-
-ul li:hover {
-  background-color: cadetblue;
 }
 
 .aside_sidebar {
@@ -29,7 +23,7 @@ ul li:hover {
 }
 
 .Open {
-  transition: transform 0.2s ease-out;
+  transition: transform 0.3s ease-out;
   transform: translateX(0);
   box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.7);
 }

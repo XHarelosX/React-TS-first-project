@@ -1,7 +1,9 @@
 .img{
-    height: 225px;
     width: 200px;
 }
 .li{
     margin: 5px 10px;
+    max-width: 220px;
+    max-height: 250px;
+    border: 1px solid black;
 }
